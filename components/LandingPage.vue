@@ -4,15 +4,15 @@
     <NuxtImg
       v-if="page"
       :src="
-        api_url + page.data.attributes.PageContent[1].imgBg.data.attributes.url
-      " />
+        '/backend' + page.data.attributes.PageContent[0].imgBg.data.attributes.url
+      "/>
     <!-- <div class="bgImg"
-            v-bind:style="{ 'background-image': 'url(' + api_url + page.data.attributes.PageContent[0].imgBg.data.attributes.url + ')' }">
-        </div> -->
-    <h1 v-if="page">{{ page.data.attributes.PageContent[1].titre }}</h1>
+      v-bind:style="{ 'background-image': 'url(' + api_url + page.data.attributes.PageContent[0].imgBg.data.attributes.url + ')' }">
+    </div> -->
+    <h1 v-if="page">{{ page.data.attributes.PageContent[0].titre }}</h1>
     <div v-if="page" class="bgColor">
       <div>
-        <h2>{{ page.data.attributes.PageContent[1].titre }}</h2>
+        <h2>{{ page.data.attributes.PageContent[0].titre }}</h2>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@ const { data: page } = await useFetch(
 
 <style>
 NuxtImg {
-  width: 100%;
+  width: 100vw;
 }
 body {
   padding: 0;

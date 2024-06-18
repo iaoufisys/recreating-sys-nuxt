@@ -6,5 +6,9 @@ export default {
   },
   image: {
     domains: ["localhost:1337"],
+    alias: {
+      backend: "http://localhost:1337"
+    }
   },
+  // config pour que NuxtImage télécharge les images de Strapi quand on veut faire du SSG ( config IPX)
 };

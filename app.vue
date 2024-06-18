@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <NuxtWelcome /> -->
+    <!-- <MainPageSYS/> -->
     <LandingPage />
   </div>
 </template>
@@ -8,6 +8,7 @@
 <script setup>
 // import NavBar from "./components/NavBar.vue"
 import LandingPage from "./components/LandingPage.vue"
+// import MainPageSYS from "./components/MainPageSYS.vue"
 
 </script>
 
