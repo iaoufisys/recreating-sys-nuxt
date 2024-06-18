@@ -1,0 +1,24 @@
+#app{
+    display: flex;
+    main{
+        flex: 1 1 0;
+    }
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(139, 0, 76);
+    font-weight: 500;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.flex-container{
+    display: flex;
+}
