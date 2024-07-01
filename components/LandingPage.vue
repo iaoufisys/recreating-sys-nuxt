@@ -1,19 +1,21 @@
 <template>
-<div class="bigcont" v-if="page">
-  
+<div class="bigcont" v-if="page && menu">
+  <!-- ne pas afficher si la page (et le menu -> nav bar) n'est pas chargée, voir début script -->
   <div class="sidebar">
     <div class="nav-bar">
       <div>
-        <img src="../public/assets/logo.png" alt="">
+        <NuxtImg
+      :src="'/backend' + menu.data.attributes.MenuContent[0].logo.data.attributes.url"/>
       </div>
+      
       <hr class="long-hr">
-      <a href="">YELLO PADEL</a>
+      <a href="">{{ menu.data.attributes.MenuContent[0].links[0].label }}</a>
       <hr>
-      <a href="">LE PADEL</a>
+      <a href="">{{ menu.data.attributes.MenuContent[0].links[1].label }}</a>
       <hr>
-      <a href="">AVANTAGES</a>
+      <a href="">{{ menu.data.attributes.MenuContent[0].links[2].label }}</a>
       <hr>
-      <a href="">CONTACT</a>
+      <a href="">{{ menu.data.attributes.MenuContent[0].links[3].label }}</a>
     </div>
   </div>
 
@@ -130,6 +132,9 @@ const api_url = "http://localhost:1337";
 
 const { data: page } = await useFetch(
   `${api_url}/api/landing-page?populate=deep`
+);
+const { data: menu } = await useFetch(
+  `${api_url}/api/menu?populate=deep`
 );
 </script>
 
