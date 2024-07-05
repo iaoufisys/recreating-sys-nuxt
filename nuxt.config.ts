@@ -15,4 +15,10 @@ export default {
     // et inversement quand on appelle backend/ pour qu'il aille bien taper sur Strapi
   },
   // config pour que NuxtImage télécharge les images de Strapi quand on veut faire du SSG ( config IPX)
+  components: true,
+  //auto import components
+  router: {
+    linkActiveClass: 'nuxt-link-active',
+    linkExactActiveClass: 'nuxt-link-exact-active',
+  }
 };

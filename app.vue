@@ -1,21 +1,23 @@
 <template>
   <div>
-    <LandingPage />
+    <TheHeader/>
+    <NuxtPage/>
+    <TheFooter/>
   </div>
 </template>
 
 <script setup>
-import LandingPage from "./components/LandingPage.vue"
-// import MainPageSYS from "./components/MainPageSYS.vue"
 
 </script>
 
 <style>
-  @import './public/style.css';
+@import './public/style.css';
 
 *{
   margin:0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+li{ 
+  color: brown!important;
 }
 </style>
