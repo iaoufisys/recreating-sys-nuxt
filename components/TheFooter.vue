@@ -5,7 +5,7 @@
             <a href="/">
             <NuxtImg
             :src="'/backend' + footer.data.attributes.footer.logo.data.attributes.img.data.attributes.url"
-            class="footer-img"/>
+            class="logo-img"/>
             </a>
         </div>
         <div>

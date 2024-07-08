@@ -1,10 +1,11 @@
 <template>
 <div v-if="navbar">
-    <div class="nav-bar">
+    <div class="nav-bar" id="navbar">
         <div>
             <a href="">
                 <NuxtImg
-                :src="'/backend' + navbar.data.attributes.navbar.logo.data.attributes.img.data.attributes.url"/>
+                :src="'/backend' + navbar.data.attributes.navbar.logo.data.attributes.img.data.attributes.url"
+                class="logo-img"/>
             </a>
         </div>
         

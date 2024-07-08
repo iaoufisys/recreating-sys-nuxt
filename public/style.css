@@ -57,6 +57,7 @@ header{
 .section-img-left{
     background-color: white;
     color: cadetblue;
+    padding-top: 2em;
 }
 .section-img-left>div{
     display: flex;
@@ -85,6 +86,9 @@ a{
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 .nav-bar>div{
     display: flex;
@@ -96,7 +100,7 @@ a{
     color: white;
 }
 .app-img{
-    width: 100%;
+    width: 70%;
 }
 .footer{
     background-color: #072033;
@@ -165,4 +169,19 @@ hr{
 }
 .block{
     width: 25%;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+    .sticky + .content {
+        padding-top: 60px;
+} 
+
+.logo-img{
+    width: 60%;
 }
